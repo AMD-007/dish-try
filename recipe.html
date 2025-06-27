@@ -19,7 +19,7 @@ try {
         $email = $_SESSION['email'];
 
         if ($conn->query("INSERT INTO comments (recipe_id, email, comment, rating) VALUES ('$id', '$email', '$comment', '$rating')")) {
-            header("Location: recipe.php?id=$id");
+            header("Location: recipe.html?id=$id");
             exit();
         } else {
             throw new Exception("Failed to submit comment. Please try again.");
