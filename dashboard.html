@@ -2,7 +2,7 @@
 include 'db.php';
 session_start();
 if (!isset($_SESSION['email'])) {
-    header('Location: index.php');
+    header('Location: index.html');
     exit();
 }
 
@@ -296,7 +296,7 @@ form button:active {
     <input type="text" name="search" placeholder="Search by recipe title..." value="<?= htmlspecialchars($_GET['search'] ?? ''); ?>">
     <input type="text" name="ingredients" placeholder="Search by ingredients..." value="<?= htmlspecialchars($_GET['ingredients'] ?? ''); ?>">
     <button type="submit">Search</button>
-    <a href="upload_recipe.php" class="upload-button">Upload New Recipe</a>
+    <a href="upload_recipe.html" class="upload-button">Upload New Recipe</a>
 </form>
 
         <?php if (isset($error_message)) : ?>
